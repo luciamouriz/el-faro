@@ -1,0 +1,33 @@
+uuid: cfbc18a1-8af6-458b-900b-eb4b5b5cb854
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - language
+    - node
+id: evento
+label: evento
+type: 'canonical_entities:node'
+pattern: '/agenda/[node:title]'
+selection_criteria:
+  ce587baf-8eb1-431a-b4de-432c1aa53210:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      event: event
+  c9b3c670-b365-4448-9f7a-1b1b77b67a4b:
+    id: language
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma

@@ -1,0 +1,24 @@
+uuid: 6a6dde96-582f-4a2a-97e3-1f872ffcbe9c
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - user
+id: colaborador
+label: colaborador
+type: 'canonical_entities:user'
+pattern: '/colaborador/[user:field_public_name]'
+selection_criteria:
+  c0feb758-4dde-4892-83ec-bb856e3a2070:
+    id: language
+    negate: false
+    context_mapping:
+      language: 'user:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -5
+relationships:
+  'user:langcode:language':
+    label: Idioma

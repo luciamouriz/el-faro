@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^11.4",
         "drupal/core-recipe-unpack": "^11.4",
         "drupal/core-recommended": "^11.4",
+        "drupal/pathauto": "^1.15",
         "drush/drush": "^13.8"
     },
     "conflict": {
@@ -101,5 +102,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/devel": "^5.5"
     }
 }

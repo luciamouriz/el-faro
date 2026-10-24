@@ -1,5 +1,5 @@
 uuid: da762028-90e6-445a-9f18-b0f20a037f5a
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -37,13 +37,13 @@ type_settings:
       default_revision: true
   transitions:
     archive:
-      label: Archivar
+      label: Archivo
       from:
         - published
       to: archived
       weight: 2
     archived_draft:
-      label: 'Restaurar a borrador'
+      label: 'Restaurar a Borrador'
       from:
         - archived
       to: draft

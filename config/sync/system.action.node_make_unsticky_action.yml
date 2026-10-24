@@ -1,5 +1,5 @@
 uuid: 7ed93865-cb76-4a6e-9fba-699ae39bd628
-langcode: en
+langcode: es
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
 id: node_make_unsticky_action
-label: 'Make content unsticky'
+label: 'Des fijar el contenido'
 type: node
 plugin: node_make_unsticky_action
 configuration: {  }

@@ -1,0 +1,33 @@
+uuid: a4380792-eb95-47f6-a8d5-4eb759dedd43
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - language
+    - node
+id: paginas
+label: paginas
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  da21ed05-98ef-491b-98a0-1329e4be3ed2:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+  718052a8-9e34-4f55-9154-8cbad8b102b8:
+    id: language
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma

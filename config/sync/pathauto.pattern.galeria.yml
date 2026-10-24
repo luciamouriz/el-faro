@@ -1,0 +1,33 @@
+uuid: 093fbea3-cd87-4bba-b9e4-e0c6d8728a47
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.gallery
+  module:
+    - language
+    - node
+id: galeria
+label: galeria
+type: 'canonical_entities:node'
+pattern: '/galeria/[node:title]'
+selection_criteria:
+  8a29b00f-4aa3-4361-9d1c-b439f85121fc:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      gallery: gallery
+  2026bb7f-ae6e-49af-9e1e-587598592cb9:
+    id: language
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma
