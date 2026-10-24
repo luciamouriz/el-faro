@@ -1,0 +1,24 @@
+uuid: 1dd62282-3084-43a0-abbc-a4b36914da70
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_account_type
+field_name: field_account_type
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: person
+      label: Persona
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

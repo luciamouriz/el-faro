@@ -1,0 +1,89 @@
+uuid: da762028-90e6-445a-9f18-b0f20a037f5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+    - node.type.gallery
+    - node.type.news_article
+  module:
+    - content_moderation
+_core:
+  default_config_hash: T7gMMyFbTYLalxpIOnzJebvek2OW0b1RgLVE9I2y228
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archivado
+      weight: 5
+      published: false
+      default_revision: true
+    draft:
+      label: Borrador
+      weight: -5
+      published: false
+      default_revision: false
+    needs_review:
+      label: 'En Revisión'
+      weight: 6
+      published: false
+      default_revision: false
+    published:
+      label: Publicado
+      weight: 0
+      published: true
+      default_revision: true
+  transitions:
+    archive:
+      label: Archivar
+      from:
+        - published
+      to: archived
+      weight: 2
+    archived_draft:
+      label: 'Restaurar a borrador'
+      from:
+        - archived
+      to: draft
+      weight: 3
+    archived_published:
+      label: Restaurar
+      from:
+        - archived
+      to: published
+      weight: 4
+    create_new_draft:
+      label: 'Crear nuevo borrador'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: 0
+    devolver_a_borrador:
+      label: 'Devolver a borrador'
+      from:
+        - needs_review
+      to: draft
+      weight: 6
+    enviar_a_revision:
+      label: 'Enviar a revisión'
+      from:
+        - draft
+      to: needs_review
+      weight: 5
+    publish:
+      label: Publicar
+      from:
+        - draft
+        - needs_review
+        - published
+      to: published
+      weight: 1
+  entity_types:
+    node:
+      - event
+      - gallery
+      - news_article
+  default_moderation_state: draft

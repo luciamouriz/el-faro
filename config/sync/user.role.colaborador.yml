@@ -1,0 +1,29 @@
+uuid: 19b0973e-3764-4397-80ef-6447d55bca0f
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - node.type.event
+    - node.type.news_article
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - media
+    - node
+id: colaborador
+label: Colaborador
+weight: 4
+is_admin: false
+permissions:
+  - 'create event content'
+  - 'create image media'
+  - 'create news_article content'
+  - 'edit own event content'
+  - 'edit own image media'
+  - 'edit own news_article content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition devolver_a_borrador'
+  - 'use editorial transition enviar_a_revision'
+  - 'view own unpublished content'
+  - 'view own unpublished media'

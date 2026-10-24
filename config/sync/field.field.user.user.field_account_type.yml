@@ -1,0 +1,21 @@
+uuid: 015dae63-2a0b-4fc7-9e4c-456ff389e1e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_account_type
+  module:
+    - options
+    - user
+id: user.user.field_account_type
+field_name: field_account_type
+entity_type: user
+bundle: user
+label: 'Tipo de cuenta'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: c33c85e1-916b-451e-b528-b2e65ad9475a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_public_name
+  module:
+    - user
+id: user.user.field_public_name
+field_name: field_public_name
+entity_type: user
+bundle: user
+label: 'Nombre público'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

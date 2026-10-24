@@ -1,0 +1,14 @@
+uuid: cdad81fc-4f12-4530-a219-e15268bdc30c
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.colaborador
+  module:
+    - user
+id: user_remove_role_action.colaborador
+label: 'Elimina el rol Colaborador al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: colaborador
