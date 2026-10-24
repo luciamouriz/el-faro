@@ -2,9 +2,9 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: es
 uuid: b2a34d2f-8b5e-4280-a6ac-caa5d3b6273d
-name: 'Mi Drupal'
+name: 'El Faro'
 mail: admin@example.com
-slogan: ''
+slogan: 'Periodismo local, claro y verificado'
 page:
   403: ''
   404: ''

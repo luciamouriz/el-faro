@@ -1,0 +1,29 @@
+uuid: 8378d2f6-788f-4993-97f9-b3749d645aa1
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.noticias
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_noticias_block_3
+theme: olivero
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:noticias-block_3'
+settings:
+  id: 'views_block:noticias-block_3'
+  label: 'Destacadas secundarias'
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,20 @@
+uuid: 99c698ce-eb04-4f83-a272-6ec9895f25aa
+langcode: es
+status: true
+dependencies:
+  theme:
+    - portal_noticias
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: portal_noticias_primary_admin_actions
+theme: portal_noticias
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

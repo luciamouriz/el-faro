@@ -1,0 +1,40 @@
+name: El Faro
+type: theme
+description: Tema del portal de noticias El Faro.
+'base theme': false
+core_version_requirement: ^11
+libraries:
+  - portal_noticias/base
+  - portal_noticias/messages
+  - core/normalize
+  - portal_noticias/global
+libraries-extend:
+  user/drupal.user:
+    - portal_noticias/user
+  core/drupal.dropbutton:
+    - portal_noticias/dropbutton
+  core/drupal.dialog:
+    - portal_noticias/dialog
+  file/drupal.file:
+    - portal_noticias/file
+  core/drupal.item-list:
+    - portal_noticias/item-list
+  core/drupal.progress:
+    - portal_noticias/progress
+  core/drupal.tablesort:
+    - portal_noticias/drupal.tablesort
+
+regions:
+  top_bar: 'Barra superior'
+  header: 'Cabecera'
+  primary_menu: 'Menú principal'
+  breadcrumb: 'Migas de pan'
+  highlighted: 'Destacado'
+  hero: 'Portada (destacadas)'
+  help: 'Ayuda'
+  content: 'Contenido'
+  sidebar: 'Barra lateral'
+  content_bottom: 'Debajo del contenido'
+  footer: 'Pie de página'
+  page_top: 'Parte superior de página'
+  page_bottom: 'Parte inferior de página'

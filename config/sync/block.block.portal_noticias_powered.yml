@@ -1,0 +1,22 @@
+uuid: a6c53b17-ca64-49a0-b098-e6fe1ff40bb2
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - portal_noticias
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: portal_noticias_powered
+theme: portal_noticias
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

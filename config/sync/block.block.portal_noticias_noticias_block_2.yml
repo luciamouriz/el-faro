@@ -1,0 +1,29 @@
+uuid: f38b1510-baf3-4ffa-8e9e-54a07dd92b77
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.noticias
+  module:
+    - system
+    - views
+  theme:
+    - portal_noticias
+id: portal_noticias_noticias_block_2
+theme: portal_noticias
+region: hero
+weight: -6
+provider: null
+plugin: 'views_block:noticias-block_2'
+settings:
+  id: 'views_block:noticias-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,50 @@
+uuid: 09e42374-e3fa-478a-88e6-6989c9716f31
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.news_article.body
+    - field.field.node.news_article.field_featured
+    - field.field.node.news_article.field_locality
+    - field.field.node.news_article.field_main_image
+    - field.field.node.news_article.field_section
+    - field.field.node.news_article.field_subtitle
+    - node.type.news_article
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.news_article.card
+targetEntityType: node
+bundle: news_article
+mode: card
+content:
+  field_main_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  field_featured: true
+  field_locality: true
+  field_subtitle: true
+  langcode: true
+  links: true

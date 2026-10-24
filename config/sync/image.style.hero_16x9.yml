@@ -1,0 +1,15 @@
+uuid: 57dba25b-652c-4c22-acad-809ce55a4454
+langcode: es
+status: true
+dependencies: {  }
+name: hero_16x9
+label: 'Hero 16:9 (1200x675)'
+effects:
+  -
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 675
+      anchor: center-center

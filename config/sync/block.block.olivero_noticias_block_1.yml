@@ -1,0 +1,29 @@
+uuid: 91561984-8e59-40c3-8352-b5dc04b94dcc
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.noticias
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_noticias_block_1
+theme: olivero
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:noticias-block_1'
+settings:
+  id: 'views_block:noticias-block_1'
+  label: 'Ultimas noticias'
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

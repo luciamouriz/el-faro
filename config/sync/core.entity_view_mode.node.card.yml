@@ -1,0 +1,11 @@
+uuid: 161d3579-31ce-4e57-ace6-9716e2a3f2e5
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.card
+label: Tarjeta
+description: null
+targetEntityType: node
+cache: true

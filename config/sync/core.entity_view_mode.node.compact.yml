@@ -1,0 +1,11 @@
+uuid: 4be94fc1-22e3-4cf9-85ca-973af048d5b9
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.compact
+label: Compacta
+description: null
+targetEntityType: node
+cache: true

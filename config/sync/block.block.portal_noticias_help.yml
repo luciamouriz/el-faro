@@ -1,0 +1,22 @@
+uuid: ad709e0f-5702-474b-943a-5ceede5e0695
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - portal_noticias
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: portal_noticias_help
+theme: portal_noticias
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

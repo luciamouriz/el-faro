@@ -1,0 +1,22 @@
+uuid: a1976153-7299-4972-a288-f0d8cd620d32
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - portal_noticias
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: portal_noticias_content
+theme: portal_noticias
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

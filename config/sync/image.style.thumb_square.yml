@@ -1,0 +1,15 @@
+uuid: 7fe48980-bbb8-4154-90b9-6476022d8a08
+langcode: es
+status: true
+dependencies: {  }
+name: thumb_square
+label: 'Miniatura cuadrada (220x220)'
+effects:
+  -
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 220
+      anchor: center-center

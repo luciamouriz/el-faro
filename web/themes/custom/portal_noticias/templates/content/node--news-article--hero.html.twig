@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Tarjeta grande de portada (modo Hero).
+ */
+#}
+<article{{ attributes.addClass('card', 'card--hero') }} data-section="{{ node.field_section.target_id }}">
+  <a class="card__image" href="{{ url }}" tabindex="-1" aria-hidden="true">
+    {{ content.field_main_image }}
+  </a>
+  <span class="tag">{{ node.field_section.entity.label }}</span>
+  <h2 class="card__title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+  {% if content.body|render|striptags|trim %}
+    <div class="card__lead">{{ content.body }}</div>
+  {% endif %}
+  <span class="meta">{{ node.uid.entity.label }} · {{ node.created.value|format_date('custom', 'j M Y') }}</span>
+</article>

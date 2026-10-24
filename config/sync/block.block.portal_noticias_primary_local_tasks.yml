@@ -1,0 +1,22 @@
+uuid: e0f620c8-1173-4692-8a59-a82701ce98e7
+langcode: es
+status: true
+dependencies:
+  theme:
+    - portal_noticias
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: portal_noticias_primary_local_tasks
+theme: portal_noticias
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
