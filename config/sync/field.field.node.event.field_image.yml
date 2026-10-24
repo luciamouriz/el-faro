@@ -1,0 +1,24 @@
+uuid: c05435d8-5713-4dcd-b8e7-62473eb8692b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.event
+id: node.event.field_image
+field_name: field_image
+entity_type: node
+bundle: event
+label: Imagen
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

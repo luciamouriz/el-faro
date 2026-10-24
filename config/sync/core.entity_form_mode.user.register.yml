@@ -1,5 +1,5 @@
 uuid: de09c583-d88a-40d8-a3b2-3f472beeb08b
-langcode: en
+langcode: es
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: 1TFiplNN7Wmj_DtVLLLP-NLPYpZJdAswKY-vTrYgFyo
 id: user.register
-label: Register
+label: Registro
 description: null
 targetEntityType: user
 cache: true

@@ -1,0 +1,11 @@
+uuid: f0a4fa82-765d-4180-bb63-429ab42401d1
+langcode: es
+status: true
+dependencies: {  }
+name: Evento
+type: event
+description: 'Eventos de la agenda cultural.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,11 @@
+uuid: a9a74dd1-461d-43cc-ab68-c0bd447b295e
+langcode: es
+status: true
+dependencies: {  }
+name: Noticia
+type: news_article
+description: 'Noticias del portal.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

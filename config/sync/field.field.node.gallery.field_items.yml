@@ -1,0 +1,30 @@
+uuid: 4f7b611c-ba90-43ab-9fac-e06a936db682
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_items
+    - media.type.audio
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.gallery
+id: node.gallery.field_items
+field_name: field_items
+entity_type: node
+bundle: gallery
+label: Elementos
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+      remote_video: remote_video
+      audio: audio
+field_type: entity_reference

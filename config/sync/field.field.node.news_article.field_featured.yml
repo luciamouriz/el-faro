@@ -1,0 +1,21 @@
+uuid: eb655c8b-a5c1-4a48-b45b-f6c5a61a7f13
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.news_article
+id: node.news_article.field_featured
+field_name: field_featured
+entity_type: node
+bundle: news_article
+label: 'Destacada en portada'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 7dc0c4a1-8f77-45da-a2fb-629531f249a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datetime
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_datetime
+field_name: field_datetime
+entity_type: node
+bundle: event
+label: 'Fecha y hora'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

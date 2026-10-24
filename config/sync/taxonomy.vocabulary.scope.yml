@@ -1,0 +1,9 @@
+uuid: 6b74701c-cae8-412f-a1ff-6b84854cb849
+langcode: es
+status: true
+dependencies: {  }
+name: Ámbito
+vid: scope
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,24 @@
+uuid: e0850c7c-c4bc-4ff8-9dd6-1b67fc1cb89a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.news_article
+    - taxonomy.vocabulary.section
+id: node.news_article.field_section
+field_name: field_section
+entity_type: node
+bundle: news_article
+label: Sección
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      section: section
+field_type: entity_reference

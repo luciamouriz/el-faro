@@ -1,5 +1,5 @@
 uuid: 269e0258-9075-4a0b-b92b-be54d6fb4f7d
-langcode: en
+langcode: es
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: nqVwm91Uyib_rvFaNPF1MdYqHlmZ38w5rsOVVy4uWDw
 id: content
-label: Content
+label: Contenido
 description: 'Content task links'
 locked: true

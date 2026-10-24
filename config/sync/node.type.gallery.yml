@@ -1,0 +1,11 @@
+uuid: aae2273e-c257-462e-afe5-446aa665bf5a
+langcode: es
+status: true
+dependencies: {  }
+name: Galería
+type: gallery
+description: 'Colecciones de fotos, vídeos y audios.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

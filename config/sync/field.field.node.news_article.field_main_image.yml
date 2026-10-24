@@ -1,0 +1,24 @@
+uuid: 1c06a974-a46f-48d2-bbdd-8ca77247aa12
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_image
+    - media.type.image
+    - node.type.news_article
+id: node.news_article.field_main_image
+field_name: field_main_image
+entity_type: node
+bundle: news_article
+label: 'Imagen principal'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

@@ -1,11 +1,11 @@
 uuid: 45a1dba6-a677-4bd9-89d5-2a4f04979a84
-langcode: en
+langcode: es
 status: true
 dependencies: {  }
 _core:
   default_config_hash: eNX6lLCKDaY83nCMh20My---y03KbiFlv802DKCCpvg
 id: und
-label: 'Not specified'
+label: 'Sin especificar'
 direction: ltr
 weight: 2
 locked: true

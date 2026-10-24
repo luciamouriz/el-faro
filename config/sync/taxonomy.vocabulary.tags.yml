@@ -1,10 +1,10 @@
 uuid: 7a3b7c0e-af6e-4952-aa0c-440827d3ad09
-langcode: en
+langcode: es
 status: true
 dependencies: {  }
 _core:
   default_config_hash: PWTsHiwkIfp5TW-iTBc9AhBtvbYY6wrp3MopazQ-95o
-name: Tags
+name: Etiquetas
 vid: tags
 description: 'Use tags to group content on similar topics into categories.'
 weight: 0

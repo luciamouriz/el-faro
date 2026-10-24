@@ -1,0 +1,9 @@
+uuid: e4e2590a-d1f3-4f9e-b183-3091edb7bea0
+langcode: es
+status: true
+dependencies: {  }
+name: Localidad
+vid: locality
+description: null
+weight: 0
+new_revision: false
