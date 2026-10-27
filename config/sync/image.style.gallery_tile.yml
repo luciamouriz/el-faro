@@ -1,0 +1,15 @@
+uuid: e0c0b734-b3c1-41cc-a3fa-e21095049ff1
+langcode: es
+status: true
+dependencies: {  }
+name: gallery_tile
+label: 'Galería mosaico (960x600)'
+effects:
+  -
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 600
+      anchor: center-center

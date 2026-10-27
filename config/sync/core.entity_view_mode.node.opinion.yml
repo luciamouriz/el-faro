@@ -1,0 +1,11 @@
+uuid: efd685d9-e710-40e3-9b41-6e1e0073a77d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.opinion
+label: Opinión
+description: null
+targetEntityType: node
+cache: true

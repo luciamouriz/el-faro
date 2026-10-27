@@ -1,0 +1,29 @@
+uuid: 2b829c21-1b78-40dc-aeae-510f2293b716
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.galerias
+  module:
+    - system
+    - views
+  theme:
+    - portal_noticias
+id: portal_noticias_galeria
+theme: portal_noticias
+region: content_bottom
+weight: -10
+provider: null
+plugin: 'views_block:galerias-block_1'
+settings:
+  id: 'views_block:galerias-block_1'
+  label: Galería
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

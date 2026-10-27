@@ -1,0 +1,24 @@
+uuid: c3b22ded-9ece-4a7a-94b9-08fbef81396f
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.barra_lateral
+  module:
+    - views
+  theme:
+    - portal_noticias
+id: portal_noticias_opinion
+theme: portal_noticias
+region: sidebar
+weight: -9
+provider: null
+plugin: 'views_block:barra_lateral-opinion'
+settings:
+  id: 'views_block:barra_lateral-opinion'
+  label: Opinión
+  label_display: visible
+  provider: views
+  views_label: Opinión
+  items_per_page: null
+visibility: {  }

@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Pieza del mosaico de la galería: portada, tipo, botón de reproducir y título.
+ */
+#}
+{{ attach_library('portal_noticias/gallery-filter') }}
+{% set kind = node.field_kind.value %}
+{% set kind_label = kind == 'video' ? 'Vídeo' : (kind == 'audio' ? 'Podcast' : 'Fotos') %}
+{% set extra = kind == 'photos' ? node.field_items|length : node.field_duration.value %}
+<article{{ attributes.addClass('tile', 'tile--' ~ kind) }} data-kind="{{ kind }}">
+  <a class="tile__link" href="{{ url }}">
+    <div class="tile__cover">{{ content.field_cover }}</div>
+    <span class="tile__kind">{{ kind_label }}{% if extra %} · {{ extra }}{% endif %}</span>
+    {% if kind != 'photos' %}<span class="tile__play" aria-hidden="true"></span>{% endif %}
+    <h3 class="tile__caption">{{ label }}</h3>
+  </a>
+</article>

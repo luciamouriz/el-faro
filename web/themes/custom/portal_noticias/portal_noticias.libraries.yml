@@ -117,3 +117,10 @@ global:
       'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap': { type: external, minified: true }
     theme:
       css/theme/portal.css: {}
+
+gallery-filter:
+  js:
+    js/gallery-filter.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

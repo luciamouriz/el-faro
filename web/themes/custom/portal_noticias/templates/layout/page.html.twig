@@ -78,11 +78,16 @@
     </section>
   {% endif %}
   
-  <main class="wrap">
+  <main class="wrap{% if page.sidebar %} has-sidebar{% endif %}">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
-      {{ page.content }}
+      {% if is_front %}
+        {# En la portada solo van los bloques; se omite la lista por defecto de Drupal. #}
+        {{ page.content|without('system_main') }}
+      {% else %}
+        {{ page.content }}
+      {% endif %}
     </div>
 
     {% if page.sidebar %}
@@ -91,8 +96,13 @@
       </aside>
     {% endif %}
 
-    {{ page.content_bottom }}
   </main>
+
+  {% if page.content_bottom %}
+    <div class="below">
+      {{ page.content_bottom }}
+    </div>
+  {% endif %}
 
   {% if page.footer %}
     <footer class="site-footer">

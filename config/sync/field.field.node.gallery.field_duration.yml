@@ -1,0 +1,19 @@
+uuid: 539ec22e-82d2-4d62-8a44-bfbb07fe16e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.gallery
+id: node.gallery.field_duration
+field_name: field_duration
+entity_type: node
+bundle: gallery
+label: 'Duración (vídeo o podcast)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

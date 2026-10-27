@@ -1,0 +1,15 @@
+uuid: 01af2865-b1de-4cf2-9604-7116cd3c2670
+langcode: es
+status: true
+dependencies: {  }
+name: card_16x9
+label: 'Tarjeta 16:9 (640x360)'
+effects:
+  -
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360
+      anchor: center-center

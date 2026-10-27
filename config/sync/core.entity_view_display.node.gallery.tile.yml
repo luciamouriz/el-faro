@@ -1,0 +1,48 @@
+uuid: ae276a59-df0e-4d56-b85d-196cbef34737
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tile
+    - field.field.node.gallery.body
+    - field.field.node.gallery.field_cover
+    - field.field.node.gallery.field_duration
+    - field.field.node.gallery.field_items
+    - field.field.node.gallery.field_kind
+    - image.style.gallery_tile
+    - node.type.gallery
+  module:
+    - media
+    - user
+id: node.gallery.tile
+targetEntityType: node
+bundle: gallery
+mode: tile
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_cover:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: gallery_tile
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_duration: true
+  field_items: true
+  field_kind: true
+  langcode: true

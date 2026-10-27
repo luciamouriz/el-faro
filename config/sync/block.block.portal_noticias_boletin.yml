@@ -1,0 +1,23 @@
+uuid: 1324c251-e0f9-44cf-8e33-961cf444aae5
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:938dcbfa-9d97-4663-905f-8484bf2a713b'
+  module:
+    - block_content
+  theme:
+    - portal_noticias
+id: portal_noticias_boletin
+theme: portal_noticias
+region: sidebar
+weight: -8
+provider: null
+plugin: 'block_content:938dcbfa-9d97-4663-905f-8484bf2a713b'
+settings:
+  id: 'block_content:938dcbfa-9d97-4663-905f-8484bf2a713b'
+  label: Boletín
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

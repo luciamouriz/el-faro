@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.gallery.body
+    - field.field.node.gallery.field_cover
+    - field.field.node.gallery.field_duration
     - field.field.node.gallery.field_items
+    - field.field.node.gallery.field_kind
     - node.type.gallery
   module:
     - text
@@ -21,6 +24,11 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_items:
     type: entity_reference_entity_view
     label: hidden
@@ -36,4 +44,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_cover: true
+  field_duration: true
+  field_kind: true
   langcode: true

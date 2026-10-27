@@ -2,6 +2,8 @@ uuid: 233d066f-8164-4ea7-9eee-7eff9062913a
 langcode: es
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - portal_noticias
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Título de la página'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

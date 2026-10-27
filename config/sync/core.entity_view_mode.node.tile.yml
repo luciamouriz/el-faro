@@ -1,0 +1,11 @@
+uuid: 11e88be9-416a-4494-a450-997163afda5a
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.tile
+label: Mosaico
+description: null
+targetEntityType: node
+cache: true

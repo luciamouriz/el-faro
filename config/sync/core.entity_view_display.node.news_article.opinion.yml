@@ -1,0 +1,38 @@
+uuid: f0540151-78fe-459a-9a47-d139699f6f12
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.opinion
+    - field.field.node.news_article.body
+    - field.field.node.news_article.field_featured
+    - field.field.node.news_article.field_locality
+    - field.field.node.news_article.field_main_image
+    - field.field.node.news_article.field_section
+    - field.field.node.news_article.field_subtitle
+    - node.type.news_article
+  module:
+    - user
+id: node.news_article.opinion
+targetEntityType: node
+bundle: news_article
+mode: opinion
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_featured: true
+  field_locality: true
+  field_main_image: true
+  field_section: true
+  field_subtitle: true
+  langcode: true

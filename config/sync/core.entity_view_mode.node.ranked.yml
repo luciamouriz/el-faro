@@ -1,0 +1,11 @@
+uuid: 4f78a49f-e017-428d-96f1-0343774bdc80
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.ranked
+label: 'Más leídas'
+description: null
+targetEntityType: node
+cache: true

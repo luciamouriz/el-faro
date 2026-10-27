@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Elemento de la lista "Opinión": avatar con iniciales, título y autor.
+ */
+#}
+{% set autor = node.uid.entity %}
+{% set rol = autor.field_account_type.value == 'association' ? 'Asociación' : 'Colaborador' %}
+<article{{ attributes.addClass('opinion-item') }}>
+  <span class="avatar" aria-hidden="true">{{ autor.label|slice(0, 2)|upper }}</span>
+  <div class="opinion-item__text">
+    <h3 class="opinion-item__title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+    <span class="meta">{{ autor.field_public_name.value ?: autor.label }} · {{ rol }}</span>
+  </div>
+</article>
