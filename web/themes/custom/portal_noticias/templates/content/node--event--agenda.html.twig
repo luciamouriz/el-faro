@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Elemento de la agenda cultural: cuadro con la fecha, título, lugar y hora.
+ */
+#}
+{% set ts = node.field_datetime.date.getTimestamp %}
+<article{{ attributes.addClass('agenda-item') }}>
+  <div class="date-box" aria-hidden="true">
+    <b>{{ ts|format_date('custom', 'j') }}</b>
+    <span>{{ ts|format_date('custom', 'D')|upper }}</span>
+  </div>
+  <div class="agenda-item__text">
+    <a class="agenda-item__title" href="{{ url }}" rel="bookmark">{{ label }}</a>
+    <span class="meta">{% if node.field_venue.value %}{{ node.field_venue.value }} · {% endif %}{{ ts|format_date('custom', 'H:i') }} h</span>
+  </div>
+</article>

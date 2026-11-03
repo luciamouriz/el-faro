@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_datetime
     - field.field.node.event.field_image
     - field.field.node.event.field_locality
+    - field.field.node.event.field_venue
     - node.type.event
   module:
     - datetime
@@ -23,6 +24,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_datetime:
     type: datetime_default
@@ -56,4 +62,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_venue: true
   langcode: true

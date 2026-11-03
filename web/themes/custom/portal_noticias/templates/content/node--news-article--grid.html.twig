@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Tarjeta vertical para cuadrículas de sección (modo Cuadrícula).
+ */
+#}
+<article{{ attributes.addClass('card', 'card--grid') }} data-section="{{ node.field_section.target_id }}">
+  <a class="card__image" href="{{ url }}" tabindex="-1" aria-hidden="true">
+    {{ content.field_main_image }}
+  </a>
+  <span class="tag">{{ node.field_section.entity.label }}</span>
+  <h3 class="card__title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+  <span class="meta">{{ node.uid.entity.label }} · {{ node.created.value|format_date('custom', 'j M Y') }}</span>
+</article>

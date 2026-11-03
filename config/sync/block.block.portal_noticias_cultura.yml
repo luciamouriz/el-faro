@@ -1,0 +1,29 @@
+uuid: 60f80c1d-6aae-423e-a288-4378f5c8997f
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.cultura
+  module:
+    - system
+    - views
+  theme:
+    - portal_noticias
+id: portal_noticias_cultura
+theme: portal_noticias
+region: content_bottom
+weight: -9
+provider: null
+plugin: 'views_block:cultura-block_1'
+settings:
+  id: 'views_block:cultura-block_1'
+  label: Cultura
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

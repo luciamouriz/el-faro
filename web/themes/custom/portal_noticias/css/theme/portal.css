@@ -485,3 +485,112 @@ main.has-sidebar > .layout-sidebar { grid-column: 2; grid-row: 1; min-width: 0; 
 
 /* página /noticias */
 .view-noticias.view-display-id-page_1 .view-content { display: grid; gap: 22px; }
+
+/* ========== Cultura y agenda ========== */
+.block-views-blockcultura-block-1 { margin-bottom: 40px; }
+.block-views-blockcultura-block-1 .view {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  column-gap: 28px;
+  align-items: start;
+}
+.block-views-blockcultura-block-1 .view-header { grid-column: 1 / -1; }
+.block-views-blockcultura-block-1 .view-content { grid-column: 1; grid-row: 2; }
+.block-views-blockcultura-block-1 .view-footer { grid-column: 2; grid-row: 2; }
+
+/* cabecera de sección: línea de color, título y enlace */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 3px solid var(--sec, var(--fg));
+  padding-top: 10px;
+  margin-bottom: 18px;
+}
+.section-head h2 { font: 800 22px var(--font-display); letter-spacing: -.02em; margin: 0; }
+.section-head a { color: var(--accent); font-weight: 600; font-size: 14px; }
+.section-head a:hover { text-decoration: underline; }
+.block-views-blockcultura-block-1 { --sec: var(--c-cultura); }
+
+/* cuadrícula 2 x 2 */
+.block-views-blockcultura-block-1 .view-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.card--grid .card__image img { aspect-ratio: 16 / 9; height: auto; }
+.card--grid .card__title { font-size: 18px; font-weight: 700; }
+
+/* agenda */
+.block-views-blockcultura-block-1 .view-footer .view {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.agenda__title { font: 800 20px var(--font-display); letter-spacing: -.02em; margin: 0 0 8px; }
+.agenda-item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 12px;
+  padding-block: 12px;
+  border-top: 1px solid var(--line);
+}
+.view-agenda .views-row:first-child .agenda-item { border-top: 0; }
+.date-box {
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 4px 0;
+  align-self: start;
+}
+.date-box b { display: block; font: 800 20px/1.1 var(--font-display); color: var(--c-cultura); }
+.date-box span { font: 500 10px var(--font-mono); letter-spacing: .08em; color: var(--muted); }
+.agenda-item__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.agenda-item__title { font-weight: 600; line-height: 1.3; }
+.agenda-item__title:hover { text-decoration: underline; }
+.agenda .meta, .agenda-item .meta { font-size: 13px; }
+.agenda__more { display: inline-block; margin-top: 8px; color: var(--accent); font-weight: 600; font-size: 14px; }
+.agenda__more:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .block-views-blockcultura-block-1 .view { grid-template-columns: 1fr; }
+  .block-views-blockcultura-block-1 .view-content,
+  .block-views-blockcultura-block-1 .view-footer { grid-column: 1; grid-row: auto; }
+  .block-views-blockcultura-block-1 .view-footer { margin-top: 28px; }
+}
+@media (max-width: 560px) {
+  .block-views-blockcultura-block-1 .view-content { grid-template-columns: 1fr; }
+}
+
+/* página /agenda: lista a una columna */
+.view-agenda.view-display-id-page_1 .view-content { max-width: 640px; }
+
+/* la agenda (dentro del pie) no hereda la cuadrícula de las noticias */
+.block-views-blockcultura-block-1 .view-footer .view-content {
+  display: block;
+  grid-column: auto;
+  grid-row: auto;
+}
+
+/* ========== Secciones Nacional e Internacional ========== */
+.block-views-blocksecciones-nacional,
+.block-views-blocksecciones-internacional { margin-bottom: 40px; }
+.block-views-blocksecciones-nacional { --sec: var(--c-nacional); }
+.block-views-blocksecciones-internacional { --sec: var(--c-internacional); }
+.block-views-blocksecciones-nacional .view-content,
+.block-views-blocksecciones-internacional .view-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+@media (max-width: 900px) {
+  .block-views-blocksecciones-nacional .view-content,
+  .block-views-blocksecciones-internacional .view-content { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .block-views-blocksecciones-nacional .view-content,
+  .block-views-blocksecciones-internacional .view-content { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,11 @@
+uuid: e749674c-854c-4874-8a99-1698ef5497b4
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.agenda
+label: Agenda
+description: null
+targetEntityType: node
+cache: true

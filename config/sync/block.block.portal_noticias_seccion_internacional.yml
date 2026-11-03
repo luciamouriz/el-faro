@@ -1,0 +1,29 @@
+uuid: 4106ec09-655b-43af-969d-5ff450799f7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.secciones
+  module:
+    - system
+    - views
+  theme:
+    - portal_noticias
+id: portal_noticias_seccion_internacional
+theme: portal_noticias
+region: content_bottom
+weight: -7
+provider: null
+plugin: 'views_block:secciones-internacional'
+settings:
+  id: 'views_block:secciones-internacional'
+  label: Internacional
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
