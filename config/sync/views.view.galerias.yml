@@ -176,7 +176,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: '<div class="gallery-head"><h2>Galería</h2><div class="gallery-head__tools"><div class="chips" role="group" aria-label="Tipo de contenido"><button type="button" data-kind="all" aria-pressed="true">Todo</button><button type="button" data-kind="photos" aria-pressed="false">Fotos</button><button type="button" data-kind="video" aria-pressed="false">Vídeos</button><button type="button" data-kind="audio" aria-pressed="false">Podcasts</button></div><a class="more-link-inline" href="/galerias">Ver todas</a></div></div>'
+            value: '<div class="gallery-head"><h2>Galería</h2><div class="gallery-head__tools"><div class="chips" role="group" aria-label="Tipo de contenido"><button type="button" data-kind="all" aria-pressed="true">Todo</button><button type="button" data-kind="photos" aria-pressed="false">Fotos</button><button type="button" data-kind="video" aria-pressed="false">Vídeos</button><button type="button" data-kind="audio" aria-pressed="false">Podcasts</button></div></div></div>'
             format: full_html
       footer: {  }
       display_extenders: {  }
