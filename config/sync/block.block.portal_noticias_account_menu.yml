@@ -12,7 +12,7 @@ _core:
   default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
 id: portal_noticias_account_menu
 theme: portal_noticias
-region: top_bar
+region: top_bar_end
 weight: -4
 provider: null
 plugin: 'system_menu_block:account'

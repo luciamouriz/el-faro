@@ -1,0 +1,11 @@
+uuid: bc5e54d2-6d37-4eeb-a8cb-0f3f42886bda
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.ticker
+label: Ticker
+description: null
+targetEntityType: node
+cache: true

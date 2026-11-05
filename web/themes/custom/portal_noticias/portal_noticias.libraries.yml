@@ -124,3 +124,10 @@ gallery-filter:
   dependencies:
     - core/drupal
     - core/once
+
+top-date:
+  js:
+    js/top-date.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

@@ -44,13 +44,18 @@
 #}
 <div class="page">
 
-  {% if page.top_bar %}
-    <div class="top-bar">
-      <div class="wrap">
+  {{ attach_library('portal_noticias/top-date') }}
+  <div class="top-bar">
+    <div class="wrap">
+      <div class="top-bar__start">
         {{ page.top_bar }}
       </div>
+      <div class="top-bar__end">
+        <time class="top-date" data-top-date></time>
+        {{ page.top_bar_end }}
+      </div>
     </div>
-  {% endif %}
+  </div>
 
   <header class="masthead">
     <div class="wrap">

@@ -25,7 +25,8 @@ libraries-extend:
     - portal_noticias/drupal.tablesort
 
 regions:
-  top_bar: 'Barra superior'
+  top_bar: 'Barra superior (izquierda)'
+  top_bar_end: 'Barra superior (derecha)'
   header: 'Cabecera'
   primary_menu: 'Menú principal'
   breadcrumb: 'Migas de pan'

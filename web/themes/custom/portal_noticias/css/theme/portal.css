@@ -50,11 +50,38 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.top-bar .wrap { padding-block: 8px; }
-.top-bar .region { display: flex; justify-content: flex-end; gap: 16px; }
+.top-bar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 8px;
+}
+.top-bar__start { flex: 1; min-width: 0; }
+.top-bar__end { display: flex; align-items: center; gap: 16px; flex: none; }
+.top-bar .region { display: flex; align-items: center; gap: 16px; }
 .top-bar .menu { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }
 .top-bar a { color: var(--bg); }
 .top-bar a:hover { text-decoration: underline; }
+
+/* "Última hora": etiqueta roja y último titular */
+.live {
+  background: var(--live);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 2px;
+  flex: none;
+}
+.block-views-blockultima-hora-block-1 { min-width: 0; }
+.block-views-blockultima-hora-block-1 .view { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.block-views-blockultima-hora-block-1 .view-content { min-width: 0; }
+.block-views-blockultima-hora-block-1 .views-row,
+.block-views-blockultima-hora-block-1 .ticker__link { display: block; min-width: 0; }
+.ticker__link { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.top-date { white-space: nowrap; }
+@media (max-width: 760px) {
+  .top-date { display: none; }
+}
 
 /* ========== Cabecera: logo y buscador ========== */
 .masthead .region {
