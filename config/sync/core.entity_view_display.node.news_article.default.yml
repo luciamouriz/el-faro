@@ -9,8 +9,10 @@ dependencies:
     - field.field.node.news_article.field_main_image
     - field.field.node.news_article.field_section
     - field.field.node.news_article.field_subtitle
+    - image.style.hero_16x9
     - node.type.news_article
   module:
+    - media
     - text
     - user
 id: node.news_article.default
@@ -24,6 +26,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_featured:
     type: boolean
@@ -44,13 +51,15 @@ content:
     weight: 4
     region: content
   field_main_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: hero_16x9
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_section:
     type: entity_reference_label

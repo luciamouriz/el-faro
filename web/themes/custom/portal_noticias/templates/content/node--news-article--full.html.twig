@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * Página de una noticia (modo Completo): sección, título, firma, foto, texto y autor.
+ */
+#}
+{% set seccion = node.field_section.entity %}
+{% set autor = node.uid.entity %}
+{% set nombre = autor.field_public_name.value ?: autor.label %}
+{% set rol = autor.field_account_type.value == 'association' ? 'Asociación' : 'Colaborador' %}
+{% set palabras = content.body|render|striptags|split(' ')|length %}
+{% set minutos = max(1, (palabras / 200)|round(0, 'ceil')) %}
+<article{{ attributes.addClass('article') }} data-section="{{ node.field_section.target_id }}">
+
+  <header class="article__head">
+    <div class="article__kicker">
+      <a class="tag" href="{{ path('view.noticias_por_seccion.page_1', {'arg_0': node.field_section.target_id}) }}">{{ seccion.label }}</a>
+      {% if node.field_locality.entity %}
+        <span class="article__place">{{ node.field_locality.entity.label }}</span>
+      {% endif %}
+    </div>
+
+    <h1 class="article__title">{{ label }}</h1>
+
+    {% if node.field_subtitle.value %}
+      <p class="article__subtitle">{{ node.field_subtitle.value }}</p>
+    {% endif %}
+  </header>
+
+  {% if content.field_main_image|render|trim %}
+    <figure class="article__image">{{ content.field_main_image }}</figure>
+  {% endif %}
+
+  <div class="article__meta">
+    <span class="avatar avatar--sm" aria-hidden="true">{{ autor.label|slice(0, 2)|upper }}</span>
+    <span class="article__byline">
+      <a href="{{ path('entity.user.canonical', {'user': autor.id}) }}">{{ nombre }}</a>
+      · {{ rol }}
+    </span>
+    <time datetime="{{ node.created.value|format_date('custom', 'c') }}">{{ node.created.value|format_date('custom', 'j \\d\\e F \\d\\e Y')|lower }}</time>
+    <span>{{ minutos }} min de lectura</span>
+  </div>
+
+  <div class="article__body">
+    {{ content.body }}
+  </div>
+
+  <footer class="article__foot">
+    {{ content.links }}
+  </footer>
+
+  <aside class="author-box" aria-label="Sobre el autor">
+    <span class="avatar" aria-hidden="true">{{ autor.label|slice(0, 2)|upper }}</span>
+    <div class="author-box__text">
+      <span class="tag">Escrito por</span>
+      <a class="author-box__name" href="{{ path('entity.user.canonical', {'user': autor.id}) }}">{{ nombre }}</a>
+      <span class="meta">{{ rol }}</span>
+      {% if autor.field_bio.value %}
+        <p class="author-box__bio">{{ autor.field_bio.value|striptags|slice(0, 220) }}</p>
+      {% endif %}
+      {% if autor.field_website.uri %}
+        <a class="author-box__web" href="{{ autor.field_website.uri }}" rel="noopener">{{ autor.field_website.uri|replace({'https://': '', 'http://': ''}) }}</a>
+      {% endif %}
+    </div>
+  </aside>
+
+</article>
