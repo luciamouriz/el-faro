@@ -1,0 +1,23 @@
+uuid: ed79bc16-87d6-490d-aa85-9596b6682411
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - portal_noticias
+id: portal_noticias_footer_brand
+theme: portal_noticias
+region: footer
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del pie'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

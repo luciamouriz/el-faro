@@ -747,3 +747,24 @@ body:has(.sections a.is-active[href="/seccion/8"]) { --sec: var(--c-tecnologia);
   .block-views-blockrelacionadas-block-1 .view-content { grid-template-columns: 1fr; }
   .article__body { font-size: 18px; }
 }
+
+/* ========== Pie de página ========== */
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+}
+.site-footer .wrap { padding-block: 28px; color: var(--muted); font-size: 14px; }
+.site-footer .region {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.site-footer .site-name { font: 800 20px var(--font-display); letter-spacing: -.02em; line-height: 1.1; color: var(--fg); }
+.site-footer .site-name a::after { content: "."; color: var(--accent); }
+.site-footer .site-slogan { margin-top: 2px; }
+.site-footer .menu { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 0; padding: 0; }
+.site-footer .menu a { color: var(--muted); }
+.site-footer .menu a:hover { color: var(--fg); text-decoration: underline; }

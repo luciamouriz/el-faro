@@ -1,0 +1,25 @@
+uuid: b2b1d204-3baa-4ba2-bf66-da37ad71801c
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - portal_noticias
+id: portal_noticias_footer_menu
+theme: portal_noticias
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Enlaces del pie'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
