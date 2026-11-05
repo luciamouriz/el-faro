@@ -594,3 +594,53 @@ main.has-sidebar > .layout-sidebar { grid-column: 2; grid-row: 1; min-width: 0; 
   .block-views-blocksecciones-nacional .view-content,
   .block-views-blocksecciones-internacional .view-content { grid-template-columns: 1fr; }
 }
+
+/* ========== Página de sección (/seccion/N) ========== */
+.view-noticias-por-seccion .view-content,
+.view-noticias.view-display-id-page_1 .view-content { display: grid; gap: 22px; }
+
+/* color de la sección según el enlace activo del menú */
+body:has(.sections a.is-active[href="/seccion/2"]) { --sec: var(--c-nacional); }
+body:has(.sections a.is-active[href="/seccion/3"]) { --sec: var(--c-internacional); }
+body:has(.sections a.is-active[href="/seccion/4"]) { --sec: var(--c-politica); }
+body:has(.sections a.is-active[href="/seccion/5"]) { --sec: var(--c-economia); }
+body:has(.sections a.is-active[href="/seccion/6"]) { --sec: var(--c-deportes); }
+body:has(.sections a.is-active[href="/seccion/7"]) { --sec: var(--c-cultura); }
+body:has(.sections a.is-active[href="/seccion/8"]) { --sec: var(--c-tecnologia); }
+
+/* título de página con línea de color, igual que las cabeceras de bloque */
+.page-title {
+  font: 800 22px var(--font-display);
+  letter-spacing: -.02em;
+  border-top: 3px solid var(--sec, var(--fg));
+  padding-top: 10px;
+  margin: 0 0 18px;
+}
+
+/* paginador */
+.pager { margin-top: 28px; }
+.pager__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pager__item a,
+.pager__item--current {
+  display: block;
+  min-width: 38px;
+  padding: 7px 12px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font: 600 14px var(--font-body);
+  background: var(--surface);
+}
+.pager__item a:hover { border-color: var(--fg); }
+.pager__item.is-active a,
+.pager__item--current,
+.pager__item a[aria-current] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.view-empty { color: var(--muted); padding: 20px 0; }
